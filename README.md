@@ -94,3 +94,9 @@ Please check the ["model.png"](https://github.com/varchanaiyer/stanford_cars_dat
 ![raspberrypi](rp.jpeg)<br/>
 
 Raspberry Pi is a small and affordable mini computer without any peripherals. It also has an ARM Compatible CPU with an onboard GPU card . The Raspberry Pi has Wifi and Bluetooth capabilities with an operating system which supports both Linux and Raspbian.Due to its good and large open source community, it is often used by developers across the world. It can be used to run efficient machine learning models on the device.  
+
+#### Time taken for inference on the Raspberry Pi
+
+The figure below shows the time taken by a Raspberry Pi to run a inception model. It consists of loading the model and then performing inference
+
+![rptime](rptime.png)
