@@ -15,7 +15,12 @@ There are a lot of very compelling reasons for shifting computations away from t
 
 If you have many sensors, you will probably be streaming data in the order of giga bytes every hour. Even a simple camera like a pi cam will generate nearly 50 GB of data per hour at a resolution of 1280×720 and 30 fps5. It does not make sense for companies to pay for the bandwidth to send that much data when most of it is discarded anyway. Hence, it is crucial to shift all that computation to where the data is getting generated.
 
-In this Grab AI for SEA challenge of Computer Vision, the world of edge computing brings us closer to better model performance and buisness solution in approaching real-world problems. 
+In this Grab AI for SEA challenge of Computer Vision, the world of edge computing brings us closer to better model performance and buisness solution in approaching real-world problems. Hence, Edge Computing is ideal for any computer vision problems.<br/>
+There are several reasons for it. Firstly it helps us experience a real time environment where we can run our models on a limited storage space. Unlike typically, where machine learning models run on the cloud, it is vital to showcase its performance on small and limited device. <br/>
+
+Secondly this helps us to comphrend the value of time behind model training and inference. This has been showcased by running several models on the edge from large models like the inception to smaller ones like MobileNet. Thereby giving a large variety to choose from and scaling it to different datasets too.<br/>
+
+Lastly, it saves the cost and provides better privacy to the model. A Raspberry Pi is a Edge Computing device which costs less than $35.
 
 ## What was done
 For this work, multiple types of models were trained using transfer learning. A total of 8 models were trained: **inception_resnet, inception, mobilenet, resnet, vgg16, vgg19, xception**.
