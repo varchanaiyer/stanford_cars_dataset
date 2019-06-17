@@ -7,7 +7,7 @@ It is very easy to create neural networks that can get a good accuracy on a data
 It is because of this that models need to be small and fast, but still make good predictions. This was the motivation behind this submission: Can we make a model that is fast and scalable, but also robust and accurate. To do this, we used concepts of Edge Computing.
 
 ## Edge Computing
-<img align="center" src="edge-computing-slide5.png" alt="edge computing"><br/>
+<img align="center" src="images/edge-computing-slide5.png" alt="edge computing"><br/>
 
 Machine Learning Models have been primarly dependent on the cloud for data storage and analysis. As the Internet of Things (IoT) and autonomous driving becomes more mainstream, the number of devices connected to the web is increasing by the millions. In fact, Forbes estimates that the number of Internet-connected devices will exceed 75 Billion by 2025. Many, if not most, of these devices, will be smart.
 
@@ -82,7 +82,7 @@ You might want to run different models to compare like VGG, MobileNet, ResNet. <
 
 Mobile Net performs the best giving around 48 msec in average for inference. 
 
-![MobileNet](mobilenet.png)
+![MobileNet](images/mobilenet.png)
 
 ### Model Architecture 
 
@@ -91,7 +91,7 @@ Please check the ["model.png"](https://github.com/varchanaiyer/stanford_cars_dat
 
 ### Raspberry Pi 
 
-![raspberrypi](rp.jpeg)<br/>
+![raspberrypi](images/rp.jpeg)<br/>
 
 Raspberry Pi is a small and affordable mini computer without any peripherals. It also has an ARM Compatible CPU with an onboard GPU card . The Raspberry Pi has Wifi and Bluetooth capabilities with an operating system which supports both Linux and Raspbian.Due to its good and large open source community, it is often used by developers across the world. It can be used to run efficient machine learning models on the device.  
 
@@ -99,4 +99,4 @@ Raspberry Pi is a small and affordable mini computer without any peripherals. It
 
 The figure below shows the time taken by a Raspberry Pi to run a inception model. It consists of loading the model and then performing inference
 
-![rptime](rptime.png)
+![rptime](images/rptime.png)
