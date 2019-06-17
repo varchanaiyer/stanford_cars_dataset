@@ -86,7 +86,7 @@ Mobile Net performs the best giving around 48 msec in average for inference.
 
 ### Model Architecture 
 
-Please check the ["model.png"](https://github.com/varchanaiyer/stanford_cars_dataset/blob/master/model.png) file for the extensive architecture used for this challenge
+Please check the ["model.png"](https://github.com/varchanaiyer/stanford_cars_dataset/blob/master/images/model.png) file for the extensive architecture used for this challenge
 
 
 ### Raspberry Pi 
