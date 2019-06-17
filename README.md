@@ -68,12 +68,11 @@ Along with the arguments above, you can use the following for benchmarking:
 - benchmark: A flag to run the script in benchmark mode
 - i: During benchmarking you might want to run the model for a long time to see how it performs over a long period of time. This key will iterate over the same images i number of times
 
-### Model Architecture 
-
-![Model_Architecture](model.png)
-
-
 Sample command for benchmarking:
 ```bash
  python benchmark_and_test.py --loc benchmarks/inception --model_type inception --model models/inception.h5 --images data/test/1 --i 100 --benchmark
 ```
+
+### Model Architecture 
+
+![Model_Architecture](model.png)
