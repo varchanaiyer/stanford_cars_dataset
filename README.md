@@ -75,7 +75,7 @@ Sample command for benchmarking:
 
 ### Model Architecture 
 
-![Model_Architecture](model.png)
+Please check the "model.png" file for the extensive architecture used for this challenge
 
 
 ### Raspberry Pi 
