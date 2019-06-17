@@ -159,16 +159,16 @@ def train(args):
     print(model.summary())
 
     history=model.fit_generator(image_generator(train_paths, train_labels, target_size, preprocess_input),
-            steps_per_epoch=1, nb_epoch=nb_epoch, validation_data=image_generator(valid_paths, valid_labels, target_size, preprocess_input), validation_steps=1)
+            steps_per_epoch=1000, nb_epoch=nb_epoch, validation_data=image_generator(valid_paths, valid_labels, target_size, preprocess_input), validation_steps=1000)
     if args.model:
         model.save(args.model)
 
-    test_images = get_images(test_paths[:10], target_size, preprocess_input)
+    test_images = get_images(test_paths[:100], target_size, preprocess_input)
 
     y_pred_class = model.predict(test_images, verbose=1)
 
     y_pred_class = [np.argmax(r) for r in y_pred_class]
-    test_y = [np.argmax(r) for r in test_labels[:10]]
+    test_y = [np.argmax(r) for r in test_labels[:100]]
 
     print('Confusion matrix is \n', confusion_matrix(test_y, y_pred_class))
 
@@ -179,14 +179,14 @@ def train(args):
         fine_tune(model, ft_layers)
 
         history=model.fit_generator(image_generator(train_paths, train_labels, target_size, preprocess_input),
-                steps_per_epoch=1, nb_epoch=ft_epochs, validation_data=image_generator(valid_paths, valid_labels, target_size, preprocess_input), validation_steps=1)
+                steps_per_epoch=1000, nb_epoch=ft_epochs, validation_data=image_generator(valid_paths, valid_labels, target_size, preprocess_input), validation_steps=1000)
         
         model.save(args.model_ft)
 
         y_pred_class = model.predict(test_images, verbose=1)
 
         y_pred_class = [np.argmax(r) for r in y_pred_class]
-        test_y = [np.argmax(r) for r in test_labels[:10]]
+        test_y = [np.argmax(r) for r in test_labels[:100]]
 
         print('Confusion matrix is \n', confusion_matrix(test_y, y_pred_class))
 
