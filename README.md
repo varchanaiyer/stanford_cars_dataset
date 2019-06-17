@@ -91,4 +91,6 @@ Please check the ["model.png"](https://github.com/varchanaiyer/stanford_cars_dat
 
 ### Raspberry Pi 
 
+![raspberrypi](rp.jpeg)<br/>
+
 Raspberry Pi is a small and affordable mini computer without any peripherals. It also has an ARM Compatible CPU with an onboard GPU card . The Raspberry Pi has Wifi and Bluetooth capabilities with an operating system which supports both Linux and Raspbian.Due to its good and large open source community, it is often used by developers across the world. It can be used to run efficient machine learning models on the device.  
