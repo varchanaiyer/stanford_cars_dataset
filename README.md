@@ -7,8 +7,8 @@ It is very easy to create neural networks that can get a good accuracy on a data
 It is because of this that models need to be small and fast, but still make good predictions. This was the motivation behind this submission: Can we make a model that is fast and scalable, but also robust and accurate. To do this, we used concepts of Edge Computing.
 
 ## Edge Computing
+<img align="center" src="edge-computing-slide5.png" alt="edge computing"><br/>
 
-->![Edge Computing](edge-computing-slide5.png)<-
 Machine Learning Models have been primarly dependent on the cloud for data storage and analysis. As the Internet of Things (IoT) and autonomous driving becomes more mainstream, the number of devices connected to the web is increasing by the millions. In fact, Forbes estimates that the number of Internet-connected devices will exceed 75 Billion by 2025. Many, if not most, of these devices, will be smart.
 
 There are a lot of very compelling reasons for shifting computations away from the cloud and into the edge, with the most important being latency issues. Here, latency refers to the time it might take to send data to a server and then receive the response. The few seconds of delay caused by this might not be a problem for your smart home applications, but commercially, those few precious seconds, or even microseconds, can cause a machine to break down or a fatal accident.
