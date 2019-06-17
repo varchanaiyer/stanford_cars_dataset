@@ -75,6 +75,15 @@ Sample command for benchmarking:
  python benchmark_and_test.py --loc benchmarks/inception --model_type inception --model models/inception.h5 --images data/test/1 --i 100 --benchmark
 ```
 
+#### Time taken for Inference
+
+One of the major factor in determining efficient models for running on the edge, is to calculate the time taken for the model to run inference.
+You might want to run different models to compare like VGG, MobileNet, ResNet. <br/>
+
+Mobile Net performs the best giving around 48 msec in average for inference. 
+
+![MobileNet](mobilenet.png)
+
 ### Model Architecture 
 
 Please check the "model.png" file for the extensive architecture used for this challenge
