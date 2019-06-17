@@ -28,4 +28,47 @@ pip install -r requirements.txt
 ```
 
 ### Training a model
-The `train_model.py` file can 
+The `train_model.py` file can be used to train the individual models.
+
+The following arguments are used the train the models:
+- model_type: Which model to use. One of `inception_resnet`, `inception`, `mobilenet`, `resnet`, `vgg16`, `vgg19`, `xception`. Default = inception_resnet
+- nb_epoch: Number of epochs for Transfer Learning. Default = 1.
+- batch_size: Batch size for training. Default = 32.
+- model: Path to save model to
+- ft: Use this flag if you want to fine tune your model too.
+- epoch_ft: The number of epochs to finetune the model for. Default = 1
+- model_ft: Path to save finetuned model to.
+
+**Note**: Normal training will just train the last feedforward network of the model and freeze the convolutional layers. Finetuning will unfreeze the initial convolutional layers and train the whole network.
+
+Sample command to train the model is:
+```bash
+python train_model.py --model_type inception --nb_epoch 1 --model models/inception.h5 --ft --model_ft models/inception_ft.h5 --epoch_ft 2 --nb_epoch 2
+```
+
+### Inference
+To run inference on the model you can use the `benchmark_and_test.py` file.
+
+The following arguments are used to run inference:
+- loc: The path where you want to save the prediction results
+- model: The path of the saved model file. The model which you want to use for running inference
+- model_type: Which model you are running inference with. One of `inception_resnet`, `inception`, `mobilenet`, `resnet`, `vgg16`, `vgg19`, `xception`.
+- gpu: This is a flag that you can use to use GPU. By default predictions run on CPU
+- multi: This is a flag that you can use if you want to use multiple GPUs to run inference.
+- images: Folder that contains the images you want to use to run inference.
+
+Sample command to perform inference:
+```bash
+python benchmark_and_test.py --loc benchmarks/inception --model_type inception --model models/inception.h5 --images data/test/1
+```
+### Benchmark
+The `benchmark_and_test.py` can also be used to run benchmarking of the trained model.
+
+Along with the arguments above, you can use the following for benchmarking:
+- benchmark: A flag to run the script in benchmark mode
+- i: During benchmarking you might want to run the model for a long time to see how it performs over a long period of time. This key will iterate over the same images i number of times
+
+Sample command for benchmarking:
+```bash
+ python benchmark_and_test.py --loc benchmarks/inception --model_type inception --model models/inception.h5 --images data/test/1 --i 100 --benchmark
+```
